@@ -1,0 +1,2 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: pl/edu/agh/ftj/persistance/Bundle.properties
