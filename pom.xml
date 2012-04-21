@@ -9,5 +9,6 @@
   <modules>
     <module>api</module>
     <module>persistance</module>
+    <module>DSClient</module>
   </modules>
 </project>
