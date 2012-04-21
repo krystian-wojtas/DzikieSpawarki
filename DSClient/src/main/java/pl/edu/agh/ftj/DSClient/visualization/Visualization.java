@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package visualization;
+package pl.edu.agh.ftj.DSClient.visualization;
 
 import factory.VisualizationFactory;
 import factory.VisualizationFactory_Service;

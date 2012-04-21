@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package simulation;
+package pl.edu.agh.ftj.DSClient.simulation;
 
 import java.util.LinkedList;
 
