@@ -1,12 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
-                template="./layout.xhtml">
+                template="./layout.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html">
 
-
+    <ui:define name="top">
+        Lista wykonanych symulacji
+    </ui:define>
 
     <ui:define name="content">
-        lista wszystkich rozpoczętych/zakończonych symulacji wraz z parametrami ich startu
+        <ui:repeat value="#{simulation.resultList}" var="executedSimulation" id="simexecuted">
+            <h:outputText value="#{executedSimulation.name}"></h:outputText>
+            <ui:repeat value="#{executedSimulation.parameters}" var="parameter" id="simparam">
+                <h:outputText value="#{parameter.name}"></h:outputText>
+                <h:outputText value="#{parameter.type}"></h:outputText>
+            </ui:repeat>
+            <h:outputLink value="faces/visualization.xhtml?#{executedSimulation.url}" >zwizualizuj</h:outputLink>
+        </ui:repeat>
     </ui:define>
 
 </ui:composition>

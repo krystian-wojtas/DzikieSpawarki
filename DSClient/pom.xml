@@ -84,36 +84,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxws-maven-plugin</artifactId>
                 <version>1.10</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>wsimport</goal>
-                        </goals>
-                        <configuration>
-                            <wsdlFiles>
-                                <wsdlFile>localhost_8080/DStest/visualizationFactory.wsdl</wsdlFile>
-                            </wsdlFiles>
-                            <wsdlLocation>http://localhost:8080/DStest/visualizationFactory?wsdl</wsdlLocation>
-                            <staleFile>${project.build.directory}/jaxws/stale/visualizationFactory.stale</staleFile>
-                        </configuration>
-                        <id>wsimport-generate-visualizationFactory</id>
-                        <phase>generate-sources</phase>
-                    </execution>
-                    <execution>
-                        <goals>
-                            <goal>wsimport</goal>
-                        </goals>
-                        <configuration>
-                            <wsdlFiles>
-                                <wsdlFile>localhost_8080/DStest/simulationFactory.wsdl</wsdlFile>
-                            </wsdlFiles>
-                            <wsdlLocation>http://localhost:8080/DStest/simulationFactory?wsdl</wsdlLocation>
-                            <staleFile>${project.build.directory}/jaxws/stale/simulationFactory.stale</staleFile>
-                        </configuration>
-                        <id>wsimport-generate-simulationFactory</id>
-                        <phase>generate-sources</phase>
-                    </execution>
-                </executions>
+                <executions></executions>
                 <dependencies>
                     <dependency>
                         <groupId>javax.xml</groupId>

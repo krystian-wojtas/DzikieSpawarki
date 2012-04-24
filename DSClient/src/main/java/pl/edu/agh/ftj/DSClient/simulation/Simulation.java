@@ -15,10 +15,8 @@ import java.util.List;
 public class Simulation
 {
 
-    factory.SimulationFactory_Service service;
-    factory.SimulationFactory port;
     LinkedList<SimulationClassCore> simulationList;
-    SimulationToExecute executeSimulation;
+    SimulationToExecute simulationToExecute;
     LinkedList<SimulationFinished> resultList;
     
     /**
@@ -26,40 +24,47 @@ public class Simulation
      */
     public Simulation()
     {
-        service = new factory.SimulationFactory_Service();
-        port = service.getSimulationFactoryPort();
     }
     
-    public String sayHello()
+    
+
+    /**
+     * @return the simulationList
+     */
+    public LinkedList<SimulationClassCore> getSimulationList()
     {
-    try {
-            
-            String name = "";
-            String result = port.hello(name);
-            return "Result = "+result;
-        } catch (Exception ex) {
-            return "exception";
+        return simulationList;
+    }
+
+    /**
+     * @return the executeSimulation
+     */
+    
+    public SimulationToExecute getSimulationToExecute()
+    {
+        return simulationToExecute;
+    }
+
+    /**
+     * @return the resultList
+     */
+    public LinkedList<SimulationFinished> getResultList()
+    {
+        return resultList;
+    }
+    
+    
+    
+    public void setParameter(String parameterName, String value)
+    {
+        for(int i=0; i<this.simulationToExecute.getParameters().size(); i++)
+        {
+            if(this.simulationToExecute.getParameters().get(i).getName().equals(parameterName))
+            {
+                this.simulationToExecute.getParameters().get(i).setType(value);
+                break;
+            }
         }
-    }
-    
-    public String simulationList()
-    {
-        return port.simulationList();
-    }
-    
-    public String simulationParameters(String name)
-    {
-        return port.simulationParameters(name);
-    }
-    
-    public String executeSimulation(String name, List<String> parameters)
-    {
-        return port.executeSimulation(name, parameters);
-    }
-    
-    public String resultList()
-    {
-        return port.resultList();
     }
     
 }

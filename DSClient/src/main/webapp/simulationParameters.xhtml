@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./layout.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:pou="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="top">
+        Parametry symulacji
+        <h:outputText value="#{simulation.simulationToExecute.name}"></h:outputText>
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form id="parametersListForm">
+            <ui:repeat value="#{simulation.simulationToExecute.parameters}" var="parameter" id="simparam">
+                <h:outputText value="#{parameter.name}"></h:outputText>
+                <h:inputText value="#{parameter.type}"><f:validateDoubleRange ></f:validateDoubleRange>  </h:inputText>
+            </ui:repeat>
+            <h:commandButton action="executeSimulation" value="wykonaj symulację"></h:commandButton> 
+        </h:form>
+        
+    </ui:define>
+
+</ui:composition>

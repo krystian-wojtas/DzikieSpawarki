@@ -8,12 +8,12 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
     <managed-bean>
         <managed-bean-name>simulation</managed-bean-name>
-        <managed-bean-class>simulation.Simulation</managed-bean-class>
+        <managed-bean-class>pl.edu.agh.ftj.DSClient.simulation.Simulation</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
     <managed-bean>
         <managed-bean-name>visualization</managed-bean-name>
-        <managed-bean-class>visualization.Visualization</managed-bean-class>
+        <managed-bean-class>pl.edu.agh.ftj.DSClient.visualization.Visualization</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
 </faces-config>
