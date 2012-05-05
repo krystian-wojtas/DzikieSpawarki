@@ -30,6 +30,7 @@ public class Simulation
     public Simulation()
     {
         try { // Call Web Service Operation
+            parser = new XMLParser();
             service = new StrategiaManger_Service();
             port = service.getStrategiaMangerPort();
         } catch (Exception ex) {
