@@ -4,8 +4,10 @@
  */
 package pl.edu.agh.ftj.DSClient.simulation;
 
+import com.agh.StrategiaManger_Service;
 import java.util.LinkedList;
 import java.util.List;
+import javax.xml.ws.WebServiceRef;
 
 
 /**
@@ -14,16 +16,26 @@ import java.util.List;
  */
 public class Simulation
 {
-
-    LinkedList<SimulationClassCore> simulationList;
-    SimulationToExecute simulationToExecute;
-    LinkedList<SimulationFinished> resultList;
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/StrategiaManger/StrategiaManger.wsdl")
+    private StrategiaManger_Service service;
+    private com.agh.StrategiaManger port;
+    private XMLParser parser;
+    private LinkedList<SimulationClassCore> simulationList;
+    private SimulationToExecute simulationToExecute;
+    private LinkedList<SimulationFinished> resultList;
     
     /**
      * Creates a new instance of Simulation
      */
     public Simulation()
     {
+        try { // Call Web Service Operation
+            service = new StrategiaManger_Service();
+            port = service.getStrategiaMangerPort();
+        } catch (Exception ex) {
+        System.err.println(ex);
+        }
+
     }
     
     
@@ -33,6 +45,14 @@ public class Simulation
      */
     public LinkedList<SimulationClassCore> getSimulationList()
     {
+        try 
+        {
+            String result = port.simulationList();
+            System.out.println(result);
+            simulationList = parser.parseSimulationList(result);
+            
+        } catch (Exception ex) {System.err.println(ex); }
+
         return simulationList;
     }
 
@@ -40,9 +60,25 @@ public class Simulation
      * @return the executeSimulation
      */
     
-    public SimulationToExecute getSimulationToExecute()
+    public void executeSimulation()
     {
-        return simulationToExecute;
+        try
+        {  
+        port.executeSimulation(getSimulationToExecute().getName(), getSimulationToExecute().getParametersInStringFormat());
+        }
+        catch (Exception ex) { }
+    }
+    
+    
+    public void  SimulationParameters(String name)
+    {
+        try
+        {
+        String result = port.simulationParameters(name);
+        simulationToExecute = parser.parseSimulationParameters(name, result);
+        }
+        catch (Exception ex) { }
+        
     }
 
     /**
@@ -50,6 +86,15 @@ public class Simulation
      */
     public LinkedList<SimulationFinished> getResultList()
     {
+        try
+        {
+          String result = port.resultList();
+          resultList = parser.parseResult(result);
+        }
+        catch(Exception ex)
+        {
+            System.err.println(ex);
+        }
         return resultList;
     }
     
@@ -57,14 +102,22 @@ public class Simulation
     
     public void setParameter(String parameterName, String value)
     {
-        for(int i=0; i<this.simulationToExecute.getParameters().size(); i++)
+        for(int i=0; i<this.getSimulationToExecute().getParameters().size(); i++)
         {
-            if(this.simulationToExecute.getParameters().get(i).getName().equals(parameterName))
+            if(this.getSimulationToExecute().getParameters().get(i).getName().equals(parameterName))
             {
-                this.simulationToExecute.getParameters().get(i).setType(value);
+                this.getSimulationToExecute().getParameters().get(i).setType(value);
                 break;
             }
         }
+    }
+
+    /**
+     * @return the simulationToExecute
+     */
+    public SimulationToExecute getSimulationToExecute()
+    {
+        return simulationToExecute;
     }
     
 }

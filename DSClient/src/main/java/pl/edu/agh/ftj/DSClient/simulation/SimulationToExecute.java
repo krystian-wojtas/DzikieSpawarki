@@ -30,4 +30,14 @@ public class SimulationToExecute extends SimulationClassCore
     {
         return parameters;
     }
+    
+    public LinkedList<String> getParametersInStringFormat()
+    {
+        LinkedList<String> result = new LinkedList<String>();
+        for(int i=0;i<parameters.size();i++)
+        {
+            result.add(parameters.get(i).getType());
+        }
+        return result;
+    }
 }

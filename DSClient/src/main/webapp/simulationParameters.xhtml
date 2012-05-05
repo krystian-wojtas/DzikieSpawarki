@@ -17,7 +17,7 @@
                 <h:outputText value="#{parameter.name}"></h:outputText>
                 <h:inputText value="#{parameter.type}"><f:validateDoubleRange ></f:validateDoubleRange>  </h:inputText>
             </ui:repeat>
-            <h:commandButton action="executeSimulation" value="wykonaj symulację"></h:commandButton> 
+            <h:commandButton actionListener="#{simulation.executeSimulation()}" action="executeSimulation" value="wykonaj symulacjÄ™"></h:commandButton> 
         </h:form>
         
     </ui:define>

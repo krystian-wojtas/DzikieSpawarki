@@ -16,4 +16,11 @@
         <managed-bean-class>pl.edu.agh.ftj.DSClient.visualization.Visualization</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
+    <navigation-rule>
+        <from-view-id>/simulationParameters.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>executeSimulation</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>

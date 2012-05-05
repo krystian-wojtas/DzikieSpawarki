@@ -5,4 +5,6 @@
     <system systemId="http://localhost:8080/DStest/visualizationFactory?xsd=1" uri="wsdl/localhost_8080/DStest/visualizationFactory.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/DStest/simulationFactory?wsdl" uri="wsdl/localhost_8080/DStest/simulationFactory.wsdl"/>
     <system systemId="http://localhost:8080/DStest/simulationFactory?xsd=1" uri="wsdl/localhost_8080/DStest/simulationFactory.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/StrategiaManger/StrategiaManger?wsdl" uri="wsdl/localhost_8080/StrategiaManger/StrategiaManger.wsdl"/>
+    <system systemId="http://localhost:8080/StrategiaManger/StrategiaManger?xsd=1" uri="wsdl/localhost_8080/StrategiaManger/StrategiaManger.xsd_1.xsd"/>
 </catalog>
