@@ -39,10 +39,10 @@ public class StrategiaManger {
     @WebMethod(operationName = "simulationList")
     public String simulationList() {
         return "<simulation>"
-                +"<name>rzut ukosny</name>"
+                +"<name>rzut</name>"
                 +"</simulation>"
                 +"<simulation>"
-                +"<name>wahadło</name>"
+                +"<name>wahadlo</name>"
                 +"</simulation>";
     }
         
@@ -148,9 +148,9 @@ public class StrategiaManger {
         String result = "";
 
         Result r1 = new Result();
-        r1.id = 1234;
         r1.name = "wahadlo";
-        r1.status = "DONE";
+        r1.id = 1234; 
+        r1.status = "true";
         r1.url = "www.blabla.com";
         r1.params = "<parameter><name>masa</name><value>1</value></parameter>";
 

@@ -14,9 +14,9 @@ public class Result {
     
     @Override
     public String toString(){
-        return "<simulation>" 
-                + "<id>" + id + "</id>"
+        return "<simulation>"
                 + "<name>" + name + "</name>"
+                + "<id>" + id + "</id>"
                 + "<status>" + status + "</status>"
                 + "<url>" + url + "</url>"
                 + params
