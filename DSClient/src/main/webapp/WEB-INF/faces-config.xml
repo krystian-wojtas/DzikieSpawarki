@@ -9,12 +9,12 @@
     <managed-bean>
         <managed-bean-name>simulation</managed-bean-name>
         <managed-bean-class>pl.edu.agh.ftj.DSClient.simulation.Simulation</managed-bean-class>
-        <managed-bean-scope>request</managed-bean-scope>
+        <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
     <managed-bean>
         <managed-bean-name>visualization</managed-bean-name>
         <managed-bean-class>pl.edu.agh.ftj.DSClient.visualization.Visualization</managed-bean-class>
-        <managed-bean-scope>request</managed-bean-scope>
+        <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
     <navigation-rule>
         <from-view-id>/simulationParameters.xhtml</from-view-id>

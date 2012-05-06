@@ -6,7 +6,7 @@
         <Node id="resultList.xhtml" x="650" y="150" zoom="true"/>
         <Node id="index.xhtml" x="150" y="150" zoom="true"/>
         <Node id="simulationParameters.xhtml" x="150" y="300" zoom="true"/>
-        <Node id="layout.xhtml" x="538" y="306" zoom="true"/>
+        <Node id="layout.xhtml" x="538" y="307" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

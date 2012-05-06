@@ -78,7 +78,7 @@ public class Simulation
         {
         String result = port.simulationParameters(name);
         simulationToExecute = parser.parseSimulationParameters(name, result);
-        System.out.println(simulationToExecute.getParametersInStringFormat());
+        System.out.println(result);
         }
         catch (Exception ex) { }
         return "gp";

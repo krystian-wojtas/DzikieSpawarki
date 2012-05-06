@@ -36,7 +36,7 @@ public class XMLParser
      */
     public LinkedList<SimulationClassCore> parseSimulationList(String doc) throws XPathExpressionException, UnsupportedEncodingException
     {
-        doc = "<?xml version=\"1.0\"?><root><simulation>" + doc + "</simulation></root>";
+        doc = "<?xml version=\"1.0\"?><root>" + doc + "</root>";
         LinkedList<SimulationClassCore> result = new LinkedList<SimulationClassCore>();
         InputStream is = new ByteArrayInputStream(doc.getBytes("UTF-8"));
         InputSource input = new InputSource(is);
@@ -54,7 +54,7 @@ public class XMLParser
     
     public SimulationToExecute parseSimulationParameters(String name, String doc) throws XPathExpressionException, UnsupportedEncodingException
     {
-        doc = "<?xml version=\"1.0\"?><root>" + doc + "</root>";
+        doc = "<?xml version=\"1.0\"?><root><simulation>" + doc + "</simulation></root>";
         LinkedList<ParameterDescriptor> result = new LinkedList<ParameterDescriptor>();
         InputStream is = new ByteArrayInputStream(doc.getBytes("UTF-8"));
         InputSource input = new InputSource(is);

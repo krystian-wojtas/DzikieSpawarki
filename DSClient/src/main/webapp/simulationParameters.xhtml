@@ -15,9 +15,9 @@
         <h:form id="parametersListForm">
             <ui:repeat value="#{simulation.simulationToExecute.parameters}" var="parameter" id="simparam">
                 <h:outputText value="#{parameter.name}"></h:outputText>
-                <h:inputText value="#{parameter.type}"><f:validateDoubleRange ></f:validateDoubleRange>  </h:inputText>
+                <h:inputText value="#{parameter.type}" required="true" requiredMessage="pole jest wymagane" validatorMessage="podana przez ciebie wartość musi być liczbą"><f:validateDoubleRange ></f:validateDoubleRange>  </h:inputText> <br/>
             </ui:repeat>
-            <h:commandButton action="#{simulation.executeSimulation()}" value="wykonaj symulację"></h:commandButton> 
+            <h:commandButton type="submit" action="#{simulation.executeSimulation()}" value="wykonaj symulację"  ></h:commandButton> 
         </h:form>
         
     </ui:define>

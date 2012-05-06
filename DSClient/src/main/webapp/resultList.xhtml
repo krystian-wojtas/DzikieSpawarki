@@ -12,10 +12,10 @@
         <ui:repeat value="#{simulation.resultList}" var="executedSimulation" id="simexecuted">
             <h:outputText value="#{executedSimulation.name}"></h:outputText>
             <ui:repeat value="#{executedSimulation.parameters}" var="parameter" id="simparam">
-                <h:outputText value="#{parameter.name}"></h:outputText>
-                <h:outputText value="#{parameter.type}"></h:outputText>
+                <h:outputText value="#{parameter.name}"></h:outputText><br/>
+                <h:outputText value="#{parameter.value}"></h:outputText><br/>
             </ui:repeat>
-            <h:outputLink value="faces/visualization.xhtml?url=#{executedSimulation.url}" >zwizualizuj</h:outputLink>
+            <h:outputLink value="vizualization.xhtml?url=#{executedSimulation.url}" >zwizualizuj</h:outputLink>
         </ui:repeat>
     </ui:define>
 

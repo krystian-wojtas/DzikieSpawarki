@@ -36,7 +36,7 @@ public class SimulationToExecute extends SimulationClassCore
         LinkedList<String> result = new LinkedList<String>();
         for(int i=0;i<parameters.size();i++)
         {
-            result.add(parameters.get(i).getType());
+            result.add(parameters.get(i).getValue());
         }
         return result;
     }
