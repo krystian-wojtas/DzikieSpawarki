@@ -61,24 +61,27 @@ public class Simulation
      * @return the executeSimulation
      */
     
-    public void executeSimulation()
+    public String executeSimulation()
     {
         try
         {  
         port.executeSimulation(getSimulationToExecute().getName(), getSimulationToExecute().getParametersInStringFormat());
         }
         catch (Exception ex) { }
+        return "executeSimulation";
     }
     
     
-    public void  SimulationParameters(String name)
+    public String  SimulationParameters(String name)
     {
         try
         {
         String result = port.simulationParameters(name);
         simulationToExecute = parser.parseSimulationParameters(name, result);
+        System.out.println(simulationToExecute.getParametersInStringFormat());
         }
         catch (Exception ex) { }
+        return "gp";
         
     }
 
@@ -91,6 +94,7 @@ public class Simulation
         {
           String result = port.resultList();
           resultList = parser.parseResult(result);
+          System.out.println(resultList.size());
         }
         catch(Exception ex)
         {

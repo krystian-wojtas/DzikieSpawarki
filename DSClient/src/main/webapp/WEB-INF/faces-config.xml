@@ -22,5 +22,50 @@
             <from-outcome>executeSimulation</from-outcome>
             <to-view-id>/resultList.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>gp</from-outcome>
+            <to-view-id>/simulationParameters.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>resoultlist</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>executeSimulation</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>gp</from-outcome>
+            <to-view-id>/simulationParameters.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>resoultlist</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/vizualization.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>gp</from-outcome>
+            <to-view-id>/simulationParameters.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>resoultlist</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/resultList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>gp</from-outcome>
+            <to-view-id>/simulationParameters.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>resoultlist</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
 </faces-config>

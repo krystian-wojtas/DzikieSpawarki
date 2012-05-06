@@ -29,9 +29,9 @@
                 <h:form>
                     <h:outputText value="lista symulacji do wykonania"></h:outputText><br/>
                 <ui:repeat value="#{simulation.simulationList}" id="simlist" var="simulationType" >
-                    <h:commandLink actionListener="#{simulation.simulationParameters(simulationType.name)}" value="faces/simulationParameters.xhtml" >#{simulationType.name}</h:commandLink> 
+                    <h:commandLink value="#{simulationType.name}" action="#{simulation.SimulationParameters(simulationType.name)}" ></h:commandLink> <br/>
                 </ui:repeat>
-                <h:outputLink value="faces/resultList.xhtml">Lista wykonanych symulacji</h:outputLink>
+                    <h:commandLink value="Lista wykonanych symulacji" action="resoultlist"></h:commandLink>
                 </h:form>
             </div>
             <div id="content" class="left_content">
