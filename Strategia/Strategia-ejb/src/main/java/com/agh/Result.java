@@ -10,7 +10,7 @@ package com.agh;
  */
 public class Result {
     public int id;
-    public String name,status,url,params;
+    public String name="",status="",url="",params="";
     
     @Override
     public String toString(){

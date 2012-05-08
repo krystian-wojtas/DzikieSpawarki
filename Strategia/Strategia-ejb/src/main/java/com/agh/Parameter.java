@@ -9,6 +9,15 @@ package com.agh;
  * @author Cube
  */
 public class Parameter {
+    
+    public Parameter(){
+    }
+    
+    public Parameter(String n,float v){
+        name = n;
+        value = v;
+    }
+    
     public String name;
     public float value;
 }

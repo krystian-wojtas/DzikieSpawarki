@@ -52,7 +52,8 @@ public class Symulacja1 extends Simulation implements Symulacja1Local,Symulacja1
         }
         catch(Exception ex)
         { ex.printStackTrace(); return "Wystąpił błąd.";}
-        this.save("Symulacja1-"+id, pocisk.getWyniki());
+        
+        Simulation.saveRemote("http://fatcat.ftj.agh.edu.pl/~i7dunia/zespolowe/save.php", id, "data="+pocisk.getWyniki());
         return "DONE" ;
     }
 
