@@ -37,6 +37,40 @@ public class StrategiaManger {
         return Simulation.saveRemote("http://fatcat.ftj.agh.edu.pl/~i7dunia/zespolowe/save.php", txt, "data=test text");
     }
     
+    @WebMethod(operationName = "test")
+    public String test(@WebParam(name = "name") String name) {
+        String parameters[] = new String[7];
+        parameters[0]="2";
+        parameters[1]="3";
+        parameters[2]="45";
+        parameters[3]="1";
+        parameters[4]="0.1";
+        parameters[5]="0.2";
+        parameters[6]="20";
+        if (name.equals("rzut")) {
+            List<Parameter> tmp = new ArrayList<Parameter>();
+            tmp.add(new Parameter("predkosc",new Float(parameters[0])));
+            tmp.add(new Parameter("wysokosc",new Float(parameters[1])));
+            tmp.add(new Parameter("kat",new Float(parameters[2])));
+            tmp.add(new Parameter("masa",new Float(parameters[3])));
+            tmp.add(new Parameter("opor",new Float(parameters[4])));
+            tmp.add(new Parameter("krok",new Float(parameters[5])));
+            tmp.add(new Parameter("kroki",new Float(parameters[6])));
+            
+            Random r = new Random();
+            return s1.execute("rzut-"+r.nextInt(100000)+"-"
+                    +parameters[0]+"_"+parameters[1]+"_"+parameters[2]+"_"+parameters[3]+"_"+parameters[4]+"_"+parameters[5]+"_"+parameters[6]
+                    +"-txt"
+                    , tmp);
+        }
+        
+        if (name.equals("wahadlo")) {
+            List<Parameter> tmp = new ArrayList<Parameter>();
+            return s2.execute("random-generated-id", tmp);
+        }
+        return "BRAK";
+    }
+    
     @WebMethod(operationName = "simulationList")
     public String simulationList() {
         return "<simulation>"
