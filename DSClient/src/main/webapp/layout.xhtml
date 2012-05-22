@@ -5,39 +5,78 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:pou="http://primefaces.org/ui">
-
     <h:head>
-        
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
+        <title>Dzikie Spawarki - Środowisko do Symulowania (i wizualizowania tego jak symulujemy)</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
         <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <!--[if lt IE 7]>
+                <link href="./resources/css/cssLayout_ie.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
         <ui:insert name="head">
-        <script type="text/javascript" src="./../resources/scirpts/visualization.js"/>
-        <title>Dzikie Spawarki</title>
+            <script type="text/javascript" src="./../resources/scirpts/visualization.js"/>
+            <title>Dzikie Spawarki</title>
         </ui:insert>
     </h:head>
-
     <h:body>
+        <div class="tail-top">
+            <div class="tail-bottom">
+                <div id="main">
+                    <!-- header -->
+                    <div id="header">
+                        <div class="row-1">
+<!--                            <ul class="top-nav">
+                                <li><img alt="" src="./resources/css/images/icon-home.gif" /></li>
+                                <li><a href="contact_us.html"><img alt="" src="./resources/css/images/icon-mail.gif" /></a></li>
+                                <li><a href="site_map.html"><img alt="" src="./resources/css/images/icon-map.gif" /></a></li>
+                            </ul>-->
+                            
+                        </div>
+                        <div class="row-2">
+                            <div class="indent">
+                                <img alt="" src="./resources/css/images/logo.jpg" />
+<!--                                <h1>Projekt na programowanie zespołowe</h1>-->
+                            </div>
+                        </div>
+                        <div class="row-3">
+                            <ul class="site-nav">
+                                <h:form>
+                                    <!--                                <h:outputText value="lista symulacji do wykonania"></h:outputText><br/>-->
+                                    <ui:repeat value="#{simulation.simulationList}" id="simlist" var="simulationType" >
+                                        <li><h:commandLink value="#{simulationType.name}" action="#{simulation.SimulationParameters(simulationType.name)}" ></h:commandLink></li>
+                                    </ui:repeat>
+                                    <li><h:commandLink value="Lista wykonanych symulacji" action="resoultlist"></h:commandLink></li>
 
+                                </h:form>
 
-        <div id="top" class="top">
-            Projekt na programowanie zespołowe
-            <ui:insert name="top"></ui:insert>
-        </div>
-        <div>
-            <div id="menu">
-                <h:form>
-                    <h:outputText value="lista symulacji do wykonania"></h:outputText><br/>
-                <ui:repeat value="#{simulation.simulationList}" id="simlist" var="simulationType" >
-                    <h:commandLink value="#{simulationType.name}" action="#{simulation.SimulationParameters(simulationType.name)}" ></h:commandLink> <br/>
-                </ui:repeat>
-                    <h:commandLink value="Lista wykonanych symulacji" action="resoultlist"></h:commandLink>
-                </h:form>
-            </div>
-            <div id="content" class="left_content">
-                <ui:insert name="content">Content</ui:insert>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- content -->
+                    <div id="content">
+                        <div class="wrapper">
+                            <div class="col-1">
+                                <div class="section">
+                                    <h2><ui:insert name="top"></ui:insert></h2>
+                                    <ui:insert name="content">Content</ui:insert>
+                                </div>
+                                
+                            </div>
+                            <div class="col-2">
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    <div id="footer">
+                        <div class="indent">
+                            
+                            <div class="fright">Copyright - Pipka &copy; 2012</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </h:body>
-
 </html>

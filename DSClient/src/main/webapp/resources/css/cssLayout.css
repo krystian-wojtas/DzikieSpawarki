@@ -1,61 +1,98 @@
-
-#top {
-    position: relative;
-    background-color: #036fab;
-    color: white;
-    padding: 5px;
-    margin: 0px 0px 10px 0px;
-}
-
-#bottom {
-    position: relative;
-    background-color: #c2dfef;
-    padding: 5px;
-    margin: 10px 0px 0px 0px;
-}
-
-#left {
-    float: left;
-    background-color: #ece3a5;
-    padding: 5px;
-    width: 150px;
-}
-
-#right {
-    float: right;
-    background-color: #ece3a5;
-    padding: 5px;
-    width: 150px;
-}
-
-.center_content {
-    position: relative;
-    background-color: #dddddd;
-    padding: 5px;
-}
-
-.left_content {
-    background-color: #dddddd;
-    padding: 5px;
-    margin-left: 170px;
-}
-
-.right_content {
-    background-color: #dddddd;
-    padding: 5px;
-    margin: 0px 170px 0px 170px;
-}
-
-#top a:link, #top a:visited {
-  color: white;
-  font-weight : bold;
-  text-decoration: none;
-}
-
-#top a:link:hover, #top a:visited:hover  {
-  color: black;
-  font-weight : bold;
-  text-decoration : underline;
-}
-
-
+* {margin:0;padding:0}
+html, body {height:100%}
+body {background:#161616;font-family:Arial, Helvetica, sans-serif;font-size:100%;line-height:1.125em;color:#616161}
+img {border:0;vertical-align:top;text-align:left}
+object {vertical-align:top;outline:none}
+ul, ol {list-style:none}
+.fleft {float:left}
+.fright {float:right}
+.clear {clear:both}
+.col-1, .col-2, .col-3 {float:left}
+.alignright {text-align:right}
+.aligncenter {text-align:center}
+.wrapper {width:100%;overflow:hidden}
+.container {width:100%}
+/* GLOBAL */
+#main {width:1000px;margin:0 auto;background:url(images/main-bg.jpg) no-repeat left top;font-size:.75em}
+#header {height:420px}
+#footer {height:83px;font-family:Tahoma, Geneva, sans-serif}
+/* tailings */
+.tail-top {background:url(images/tail-top.jpg) left top repeat-x #fff}
+.tail-bottom {background:url(images/tail-bottom.gif) left bottom repeat-x}
+/* forms parameters */
+input, select, textarea {font-family:Arial, Helvetica, sans-serif; font-size:1em;vertical-align:middle;font-weight:normal}
+/* other */
+.img-indent {margin:0 20px 0 0;float:left}
+.img-box {width:100%;overflow:hidden;padding-bottom:20px}
+.img-box img {float:left;margin:0 20px 0 0}
+.extra-wrap {overflow:hidden}
+p {margin-bottom:18px}
+.p1 {margin-bottom:9px}
+.p2 {margin-bottom:18px}
+.p3 {margin-bottom:27px}
+/* txt, links, lines, titles */
+a {color:#c72d00;outline:none}
+a:hover{text-decoration:none}
+h2 {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;color:#c72d00;font-size:28px;line-height:1.2em;font-weight:normal;margin-bottom:20px;letter-spacing:-1px}
+h3 {font-size:1.1em;line-height:1.2em}
+h4 {font-size:1em;margin-bottom:6px}
+h4 a {color:#616161;text-decoration:none}
+h4 a:hover {color:#c72d00;text-decoration:underline}
+.link1 {display:block;float:right;background:url(images/link1-bg.gif) left top repeat-x;color:#c72201;text-decoration:none;position:relative}
+.link1:hover {text-decoration:none}
+.link1 em {display:block;background:url(images/link1-left.gif) no-repeat left top;float:left}
+.link1 b {display:block;background:url(images/link1-right.gif) no-repeat right top;padding:5px 20px 5px 20px;font-style:normal;float:left}
+.link1 b span {position:absolute;left:19px;top:4px;color:#fff;cursor:pointer}
+.address {float:left}
+.address dt {margin-bottom:16px}
+.address dd {clear:both;text-align:right}
+.address dd span {float:left;padding-right:25px}
+/* header */
+#header .row-1 {height:53px}
+#header .row-1 .top-nav {float:right;padding:12px 34px 0 0}
+#header .row-1 .top-nav li {display:inline;float:left}
+#header .row-2 {height:308px}
+#header .row-2 .indent {padding:54px 0 0 36px}
+#header .row-3 {padding-left:14px}
+.site-nav {background:url(images/divider.gif) no-repeat left top;width:100%;overflow:hidden}
+.site-nav li {display:inline}
+.site-nav li a {display:block;float:left;background:url(images/divider.gif) no-repeat right top;height:59px;line-height:59px;color:#fff;text-decoration:none;text-transform:uppercase;font-weight:bold;padding:0 35px}
+.site-nav li a:hover {color:#c72d00}
+/* content */
+#content {padding:42px 35px 50px 49px}
+#content .col-1 {width:556px;margin-right:60px}
+#content .col-2 {width:290px}
+#content .section {padding-bottom:38px}
+#content .inner_copy {border:0;color:#f00;float:right;width:28%!important;margin:-123px auto 0;overflow:hidden;line-height:0;padding:0;font-size:12px}
+.img-list li {width:100%;overflow:hidden;padding-bottom:2px}
+.img-list li.last {padding-bottom:0}
+.img-list li img {float:left;margin-right:20px}
+.team-list {margin-bottom:-20px}
+.team-list li {width:100%;overflow:hidden;padding-bottom:20px}
+.team-list li.last {padding-bottom:0}
+.team-list li img {float:left;margin-right:20px}
+.articles-list {margin-bottom:-20px}
+.articles-list li {width:100%;overflow:hidden;padding-bottom:20px}
+.articles-list li.last {padding-bottom:0}
+.articles-list li img {float:left;margin-right:19px}
+.articles-list li p {margin-bottom:6px}
+dl dt {font-weight:bold;margin-bottom:6px}
+dl dd {margin-bottom:18px}
+.list1 {padding-bottom:18px}
+.list1 li {background:url(images/arrow1.gif) no-repeat left 6px;padding:0 0 0 9px;position:relative}
+/* footer */
+#footer .indent {padding:27px 128px 0 49px;color:#fff}
+#footer img {position:relative;top:-3px}
+/* forms */
+#search-form {float:left;padding:16px 0 0 50px}
+#search-form fieldset {border:none;color:#fff;text-transform:uppercase;font-size:.91em}
+#search-form input.text {width:144px;background:url(images/input-bg.gif) left top repeat-x #fff;border:1px solid #c85504;text-transform:none;padding:1px 0 1px 3px}
+#poll-form fieldset {border:none}
+#poll-form label {display:block;vertical-align:top;width:100%;overflow:hidden;padding-bottom:10px}
+#poll-form input.radio {width:14px;height:14px;margin-right:5px}
+#parametersListForm {clear:right;width:100%;overflow:hidden;width:900px}
+#parametersListForm fieldset {border:none;float:left}
+#parametersListForm .field {clear:both}
+#parametersListForm label {float:left;width:97px;line-height:18px;padding-bottom:6px;font-weight:bold}
+#parametersListForm input {width:190px;padding:1px 0 1px 3px;background:url(images/input-bg1.gif) left top repeat-x #fff;border:1px solid #929292;color:#616161;float:left}
+#parametersListForm textarea {width:795px;height:130px;padding:1px 0 1px 3px;background:url(images/textarea-bg.gif) left top repeat-x #fff;border:1px solid #929292;color:#616161;margin-bottom:16px;overflow:auto;float:left}

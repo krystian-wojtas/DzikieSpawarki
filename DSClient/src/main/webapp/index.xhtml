@@ -5,15 +5,25 @@
       xmlns:h="http://java.sun.com/jsf/html">
 
 
-        <ui:composition template="./layout.xhtml">
+    <ui:composition template="./layout.xhtml">
+    <ui:define name="top">
+        Środowisko do Symulacji i Wizualizacji&trade;
+    </ui:define>
 
+        <ui:define name="content">
+            <h3>Witamy serdecznie w Środowisku do Symulacji i Wizualizacji&trade;</h3>
+            <p></p>
+            <p>Projekt ma za zadanie środowiskować symulacje i wizualizacje, a 
+                został wykonany przez batalion <strong>Dzikich Spawarek</strong>
+                rezydujący na jakże pięknym <a href="http://www.ftj.agh.edu.pl">
+                    Wydziale Fizyki i Informatyki Stosowanej AGH</a>.</p>
+            <p>Najserdecznie zapraszamy do skorzystania z menu powyżej celem posymulowania i powizualizowania</p>
+            <p>
+                Zapewniamy masę wrażeń!</p>
 
-            <ui:define name="content">
-                strona tytułowa projektu
-                zxcvzxcvzxcvzxcvzxcvzxcv
-                <h:outputText value=""> </h:outputText>
-            </ui:define>
+            <h:outputText value=""> </h:outputText>
+        </ui:define>
 
-        </ui:composition>
+    </ui:composition>
 
 </html>

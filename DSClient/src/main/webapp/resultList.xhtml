@@ -9,14 +9,22 @@
     </ui:define>
 
     <ui:define name="content">
+
+
+
+        <ul class="articles-list">
         <ui:repeat value="#{simulation.resultList}" var="executedSimulation" id="simexecuted">
-            <h:outputText value="#{executedSimulation.name}"></h:outputText>
+            <li>
+                <img alt="" src="./resources/css/images/simulation-modeling-icon.png" />
+            <h4><h:outputText value="#{executedSimulation.name}"></h:outputText></h4><div style="margin-left: 160px;">
             <ui:repeat value="#{executedSimulation.parameters}" var="parameter" id="simparam">
-                <h:outputText value="#{parameter.name}"></h:outputText><br/>
-                <h:outputText value="#{parameter.value}"></h:outputText><br/>
+                <h:outputText value="#{parameter.name}"></h:outputText>: 
+                <h:outputText value="#{parameter.value}"></h:outputText><br />
             </ui:repeat>
-            <h:outputLink value="vizualization.xhtml?url=#{executedSimulation.url}" >zwizualizuj</h:outputLink>
+            <h:outputLink value="vizualization.xhtml?url=#{executedSimulation.url}" >Powizualizuluj!</h:outputLink></div>
+            </li>
         </ui:repeat>
+        </ul>
     </ui:define>
 
 </ui:composition>
