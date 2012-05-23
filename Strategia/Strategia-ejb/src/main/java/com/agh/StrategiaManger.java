@@ -71,39 +71,39 @@ public class StrategiaManger {
         if (name.equals("rzut")) {
             
             result +="<parameter>";
-            result +="<name>predkosc</name>";
+            result +="<name>Predkosc poczatkowa</name>";
             result +="<type>float</type>";
             result +="</parameter>";
             
             result +="<parameter>";
-            result +="<name>wysokosc</name>";
+            result +="<name>Wysokosc poczatkowa</name>";
             result +="<type>float</type>";
             result +="</parameter>";
             
             result +="<parameter>";
-            result +="<name>kat</name>";
+            result +="<name>Kat poczatkowy</name>";
             result +="<type>float</type>";
             result +="</parameter>";
             
             result +="<parameter>";
-            result +="<name>masa</name>";
+            result +="<name>Masa</name>";
             result +="<type>float</type>";
             result +="</parameter>";
             
             result +="<parameter>";
-            result +="<name>opor</name>";
+            result +="<name>Wspolczynnik oporu</name>";
             result +="<type>float</type>";
             result +="</parameter>";
             
             result +="<parameter>";
-            result +="<name>krok</name>";
+            result +="<name>Krok czasowy</name>";
             result +="<type>float</type>";
             result +="</parameter>";
             
-            result +="<parameter>";
+            /*result +="<parameter>";
             result +="<name>kroki</name>";
             result +="<type>int</type>";
-            result +="</parameter>";
+            result +="</parameter>";*/
             
             return result;
         }
@@ -118,13 +118,13 @@ public class StrategiaManger {
         
         if (name.equals("rzut")) {
             List<Parameter> tmp = new ArrayList<Parameter>();
-            tmp.add(new Parameter("predkosc",new Float(parameters[0])));
-            tmp.add(new Parameter("wysokosc",new Float(parameters[1])));
-            tmp.add(new Parameter("kat",new Float(parameters[2])));
-            tmp.add(new Parameter("masa",new Float(parameters[3])));
-            tmp.add(new Parameter("opor",new Float(parameters[4])));
-            tmp.add(new Parameter("krok",new Float(parameters[5])));
-            tmp.add(new Parameter("kroki",new Float(parameters[6])));
+            tmp.add(new Parameter("Predkosc poczatkowa",new Float(parameters[0])));
+            tmp.add(new Parameter("Wysokosc poczatkowa",new Float(parameters[1])));
+            tmp.add(new Parameter("Kat poczatkowy",new Float(parameters[2])));
+            tmp.add(new Parameter("Masa",new Float(parameters[3])));
+            tmp.add(new Parameter("Wspolczynnik oporu",new Float(parameters[4])));
+            tmp.add(new Parameter("Krok czasowy",new Float(parameters[5])));
+            //tmp.add(new Parameter("kroki",new Float(parameters[6])));
             
             Random r = new Random();
             return s1.execute("rzut-"+r.nextInt(100000)+"-"
@@ -167,13 +167,13 @@ public class StrategiaManger {
                 
                 if(files[i].startsWith("rzut")){
                     String params[] = tmp[2].split("_");
-                    r.params+="<parameter><name>predkosc</name><value>"+params[0]+"</value></parameter>";
-                    r.params+="<parameter><name>wysokosc</name><value>"+params[1]+"</value></parameter>";
-                    r.params+="<parameter><name>kat</name><value>"+params[2]+"</value></parameter>";
-                    r.params+="<parameter><name>masa</name><value>"+params[3]+"</value></parameter>";
-                    r.params+="<parameter><name>opor</name><value>"+params[4]+"</value></parameter>";
-                    r.params+="<parameter><name>krok</name><value>"+params[5]+"</value></parameter>";
-                    r.params+="<parameter><name>kroki</name><value>"+params[6]+"</value></parameter>";
+                    r.params+="<parameter><name>Predkosc poczatkowa</name><value>"+params[0]+"</value></parameter>";
+                    r.params+="<parameter><name>Wysokosc poczatkowa</name><value>"+params[1]+"</value></parameter>";
+                    r.params+="<parameter><name>Kat poczatkowy</name><value>"+params[2]+"</value></parameter>";
+                    r.params+="<parameter><name>Masa</name><value>"+params[3]+"</value></parameter>";
+                    r.params+="<parameter><name>Wspolczynnik oporu</name><value>"+params[4]+"</value></parameter>";
+                    r.params+="<parameter><name>Krok czasowy</name><value>"+params[5]+"</value></parameter>";
+                    //r.params+="<parameter><name>kroki</name><value>"+params[6]+"</value></parameter>";
                 }
                 
                 if(files[i].startsWith("wahadlo"))
