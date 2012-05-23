@@ -25,17 +25,17 @@ public class Symulacja1 extends Simulation implements Symulacja1Local,Symulacja1
         {
             for (Parameter parm : param)
             {
-                if (parm.name.equalsIgnoreCase("predkosc"))
+                if (parm.name.equalsIgnoreCase("predkosc poczatkowa"))
                     vPocz = ((double)parm.value);
-                else if (parm.name.equalsIgnoreCase("wysokosc"))
+                else if (parm.name.equalsIgnoreCase("wysokosc poczatkowa"))
                     yPocz = ((double)parm.value);
-                else if (parm.name.equalsIgnoreCase("kat"))
+                else if (parm.name.equalsIgnoreCase("kat poczatkowy"))
                     katPocz = ((double)parm.value);
                 else if (parm.name.equalsIgnoreCase("masa"))
                     m = ((double) parm.value);
-                else if (parm.name.equalsIgnoreCase("opor"))
+                else if (parm.name.equalsIgnoreCase("wspolczynnik oporu"))
                     k = ((double)parm.value);
-                else if (parm.name.equalsIgnoreCase("krok"))
+                else if (parm.name.equalsIgnoreCase("krok czasowy"))
                     dt = ((double)parm.value);
                 else if (parm.name.equalsIgnoreCase("kroki"))
                     n = ((int)parm.value);
