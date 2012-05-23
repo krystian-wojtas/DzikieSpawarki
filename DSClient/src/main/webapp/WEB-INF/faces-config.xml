@@ -9,11 +9,63 @@
     <managed-bean>
         <managed-bean-name>simulation</managed-bean-name>
         <managed-bean-class>pl.edu.agh.ftj.DSClient.simulation.Simulation</managed-bean-class>
-        <managed-bean-scope>request</managed-bean-scope>
+        <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
     <managed-bean>
         <managed-bean-name>visualization</managed-bean-name>
         <managed-bean-class>pl.edu.agh.ftj.DSClient.visualization.Visualization</managed-bean-class>
-        <managed-bean-scope>request</managed-bean-scope>
+        <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
+    <navigation-rule>
+        <from-view-id>/simulationParameters.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>executeSimulation</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>gp</from-outcome>
+            <to-view-id>/simulationParameters.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>resoultlist</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>executeSimulation</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>gp</from-outcome>
+            <to-view-id>/simulationParameters.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>resoultlist</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/vizualization.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>gp</from-outcome>
+            <to-view-id>/simulationParameters.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>resoultlist</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/resultList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>gp</from-outcome>
+            <to-view-id>/simulationParameters.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>resoultlist</from-outcome>
+            <to-view-id>/resultList.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>

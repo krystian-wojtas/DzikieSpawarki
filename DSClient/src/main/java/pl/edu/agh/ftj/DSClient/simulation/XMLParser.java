@@ -6,6 +6,7 @@ package pl.edu.agh.ftj.DSClient.simulation;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
@@ -33,10 +34,11 @@ public class XMLParser
     /**
      * @return the list of SimulationClassCore objects
      */
-    public LinkedList<SimulationClassCore> parseSimulationList(String doc) throws XPathExpressionException
+    public LinkedList<SimulationClassCore> parseSimulationList(String doc) throws XPathExpressionException, UnsupportedEncodingException
     {
+        doc = "<?xml version=\"1.0\"?><root>" + doc + "</root>";
         LinkedList<SimulationClassCore> result = new LinkedList<SimulationClassCore>();
-        InputStream is = new ByteArrayInputStream(doc.getBytes());
+        InputStream is = new ByteArrayInputStream(doc.getBytes("UTF-8"));
         InputSource input = new InputSource(is);
         
         NodeList nodes = (NodeList)xPath.evaluate("//simulation/name",input,XPathConstants.NODESET);
@@ -49,10 +51,12 @@ public class XMLParser
     /**
      * @return the SimulationToExecute object
      */
-    public SimulationToExecute parseSimulationParameters(String name, String doc) throws XPathExpressionException
+    
+    public SimulationToExecute parseSimulationParameters(String name, String doc) throws XPathExpressionException, UnsupportedEncodingException
     {
+        doc = "<?xml version=\"1.0\"?><root><simulation>" + doc + "</simulation></root>";
         LinkedList<ParameterDescriptor> result = new LinkedList<ParameterDescriptor>();
-        InputStream is = new ByteArrayInputStream(doc.getBytes());
+        InputStream is = new ByteArrayInputStream(doc.getBytes("UTF-8"));
         InputSource input = new InputSource(is);
         
         NodeList nodes = (NodeList)xPath.evaluate("//simulation",input,XPathConstants.NODESET);
@@ -74,10 +78,11 @@ public class XMLParser
     /**
      * @return the list of SimulationFinished objects
      */
-    public LinkedList<SimulationFinished> parseResult(String doc) throws XPathExpressionException
+    public LinkedList<SimulationFinished> parseResult(String doc) throws XPathExpressionException, UnsupportedEncodingException
     {
+        doc = "<?xml version=\"1.0\"?><root>" + doc + "</root>";
         LinkedList<SimulationFinished> result = new LinkedList<SimulationFinished>();
-        InputStream is = new ByteArrayInputStream(doc.getBytes());
+        InputStream is = new ByteArrayInputStream(doc.getBytes("UTF-8"));
         InputSource input = new InputSource(is);
         
         NodeList nodes = (NodeList)xPath.evaluate("//simulation",input,XPathConstants.NODESET);

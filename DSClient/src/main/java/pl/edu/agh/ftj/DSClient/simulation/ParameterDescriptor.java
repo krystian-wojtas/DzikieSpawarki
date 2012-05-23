@@ -33,9 +33,13 @@ public class ParameterDescriptor
      */
     public String getType()
     {
-        return type;
+        return "";
     }
 
+    public String getValue()
+    {
+        return type;
+    }
     /**
      * @param type the type to set
      */

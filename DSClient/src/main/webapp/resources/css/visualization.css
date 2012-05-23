@@ -1,0 +1,24 @@
+/* 
+    Document   : visualization
+    Created on : 2012-05-05, 22:34:55
+    Author     : Monk
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+html, body {
+	    height: 100%;
+	    overflow: auto;
+    }
+    body {
+	    padding: 0;
+	    margin: 0;
+    }
+    #silverlightControlHost {
+	    height: 100%;
+	    text-align:center;
+    }

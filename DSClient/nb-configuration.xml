@@ -18,5 +18,6 @@ Any value defined here will override the pom.xml file value but is only applicab
         <org-netbeans-modules-maven-jaxws._5f_C_5f_localhost_5f_8080>http://localhost:8080</org-netbeans-modules-maven-jaxws._5f_C_5f_localhost_5f_8080>
         <org-netbeans-modules-maven-jaxws._5f_C_5f_simulationFactory>http://localhost:8080/DStest/simulationFactory?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_simulationFactory>
         <org-netbeans-modules-maven-jaxws._5f_C_5f_visualizationFactory>http://localhost:8080/DStest/visualizationFactory?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_visualizationFactory>
+        <org-netbeans-modules-maven-jaxws._5f_C_5f_StrategiaManger>http://localhost:8080/StrategiaManger/StrategiaManger?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_StrategiaManger>
     </properties>
 </project-shared-configuration>

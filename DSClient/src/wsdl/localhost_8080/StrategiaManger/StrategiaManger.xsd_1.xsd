@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1-b09 (branches/2.1-6834; 2011-07-16T17:14:48+0000) JAXWS-RI/2.2.5-promoted-b04 JAXWS/2.2. --><xs:schema xmlns:tns="http://agh.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://agh.com/">
+
+<xs:element name="executeSimulation" type="tns:executeSimulation"/>
+
+<xs:element name="executeSimulationResponse" type="tns:executeSimulationResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="resultList" type="tns:resultList"/>
+
+<xs:element name="resultListResponse" type="tns:resultListResponse"/>
+
+<xs:element name="simulationList" type="tns:simulationList"/>
+
+<xs:element name="simulationListResponse" type="tns:simulationListResponse"/>
+
+<xs:element name="simulationParameters" type="tns:simulationParameters"/>
+
+<xs:element name="simulationParametersResponse" type="tns:simulationParametersResponse"/>
+
+<xs:complexType name="executeSimulation">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="parameters" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeSimulationResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="simulationList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="simulationListResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resultList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="resultListResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="simulationParameters">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="simulationParametersResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

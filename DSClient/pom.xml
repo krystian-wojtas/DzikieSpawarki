@@ -84,7 +84,22 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxws-maven-plugin</artifactId>
                 <version>1.10</version>
-                <executions></executions>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <wsdlFiles>
+                                <wsdlFile>localhost_8080/StrategiaManger/StrategiaManger.wsdl</wsdlFile>
+                            </wsdlFiles>
+                            <wsdlLocation>http://localhost:8080/StrategiaManger/StrategiaManger?wsdl</wsdlLocation>
+                            <staleFile>${project.build.directory}/jaxws/stale/StrategiaManger.stale</staleFile>
+                        </configuration>
+                        <id>wsimport-generate-StrategiaManger</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                </executions>
                 <dependencies>
                     <dependency>
                         <groupId>javax.xml</groupId>
