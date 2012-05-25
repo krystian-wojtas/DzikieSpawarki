@@ -18,32 +18,32 @@ namespace Wiz
 
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            try
+            //try
+            //{
+            var parameters = HtmlPage.Document.QueryString;
+            if (parameters.ContainsKey(urlParam))
             {
-                var parameters = HtmlPage.Document.QueryString;
-                if (parameters.ContainsKey(urlParam))
+                var url = parameters[urlParam];
+                Uri fileUri;
+                if (Uri.TryCreate(url, UriKind.Absolute, out fileUri))
                 {
-                    var url = parameters[urlParam];
-                    Uri fileUri;
-                    if (Uri.TryCreate(url, UriKind.Absolute, out fileUri))
-                    {
-                        this.DataContext = new SeriesViewModel(fileUri);
-                        urlTextBox.Text = url;
-                    }
-                    else
-                    {
-                        urlTextBox.Text = "malformed simulation data url";
-                    }
+                    this.DataContext = new SeriesViewModel(fileUri);
+                    urlTextBox.Text = url;
                 }
                 else
                 {
-                    urlTextBox.Text = "No file location in url";
+                    urlTextBox.Text = "malformed simulation data url";
                 }
             }
-            catch (Exception ex)
+            else
             {
-                urlTextBox.Text = ex.Message;
+                urlTextBox.Text = "No file location in url";
             }
+            //}
+            //catch (Exception ex)
+            //{
+            //    urlTextBox.Text = ex.Message;
+            //}
         }
     }
 }

@@ -1,0 +1,5 @@
+C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz.Web\bin\Wiz.Web.dll
+C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz.Web\bin\Wiz.Web.pdb
+C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz.Web\obj\Release\ResolveAssemblyReference.cache
+C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz.Web\obj\Release\Wiz.Web.dll
+C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz.Web\obj\Release\Wiz.Web.pdb

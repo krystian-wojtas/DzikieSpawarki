@@ -67,10 +67,16 @@
     </Content>
     <Content Include="WizTestPage.aspx" />
     <Content Include="WizTestPage.html" />
+    <Content Include="xim.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SilverlightFaultBehavior.cs" />
+    <Compile Include="xim.txt.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xim.txt.designer.cs">
+      <DependentUpon>xim.txt.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
