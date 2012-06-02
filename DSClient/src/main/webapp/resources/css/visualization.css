@@ -19,6 +19,7 @@ html, body {
 	    margin: 0;
     }
     #silverlightControlHost {
-	    height: 100%;
+        width: 400px;
+	    height: 400px;
 	    text-align:center;
     }
