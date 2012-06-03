@@ -6,8 +6,8 @@ package pl.edu.agh.ftj.DSClient.visualization;
 
 
 /**
- *
- * @author Monk
+ * Klasa miała służyć do obsługi wizualizacji. Na dzień obecny nie robi nic
+ * @author Michał Zimnicki
  */
 public class Visualization
 {

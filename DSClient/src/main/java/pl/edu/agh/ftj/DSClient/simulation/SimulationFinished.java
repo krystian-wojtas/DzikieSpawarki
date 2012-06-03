@@ -7,8 +7,8 @@ package pl.edu.agh.ftj.DSClient.simulation;
 import java.util.LinkedList;
 
 /**
- *
- * @author Monk
+ *Klasa przechowująca wszystkie parametry zwiazane z zakończoną symulacją - gotową do wizualizacji.
+ * @author Michał Zimnicki
  */
 public class SimulationFinished extends SimulationToExecute
 {
@@ -16,6 +16,14 @@ public class SimulationFinished extends SimulationToExecute
     private String url;
     private int id;
 
+    /**
+     * Inicjalizacji instancji klasy
+     * @param status status symulacji
+     * @param url adres pod którym znajduje się plik z wynikami
+     * @param id unikatowy numer symulacji
+     * @param name nazwa symulacji
+     * @param parameters parametry symulacji
+     */
     public SimulationFinished(boolean status, String url, int id, String name, LinkedList<ParameterDescriptor> parameters)
     {
         super(name, parameters);
@@ -25,7 +33,8 @@ public class SimulationFinished extends SimulationToExecute
     }
 
     /**
-     * @return the status
+     * Zwraca status symulacji (zakończona lub nie)
+     * @return status symulacji 
      */
     public boolean isStatus()
     {
@@ -33,7 +42,8 @@ public class SimulationFinished extends SimulationToExecute
     }
 
     /**
-     * @return the url
+     * Zwraca url pod którym znajduje się plik wynikowy symulacji
+     * @return url z plikiem wynikowym
      */
     public String getUrl()
     {
@@ -41,7 +51,8 @@ public class SimulationFinished extends SimulationToExecute
     }
 
     /**
-     * @return the id
+     * Zwraca id zakończonej symulacji do jej jednoznacznej identyfikacji
+     * @return id
      */
     public int getId()
     {
