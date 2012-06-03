@@ -39,6 +39,19 @@ public class Symulacja1 extends Simulation implements Symulacja1Local,Symulacja1
                     dt = ((double)parm.value);
                 else if (parm.name.equalsIgnoreCase("kroki"))
                     n = ((int)parm.value);
+                else if (parm.name.equalsIgnoreCase("predkosc poczatkowa"))
+                    vPocz = ((double)parm.value);
+                else if (parm.name.equalsIgnoreCase("wysokosc poczatkowa"))
+                    yPocz = ((double)parm.value);
+                else if (parm.name.equalsIgnoreCase("kat poczatkowy"))
+                    katPocz = ((double)parm.value);
+                else if (parm.name.equalsIgnoreCase("masa"))
+                    m = ((double) parm.value);
+                else if (parm.name.equalsIgnoreCase("wspolczynnik oporu"))
+                    k = ((double)parm.value);
+                else if (parm.name.equalsIgnoreCase("krok czasowy"))
+                    dt = ((double)parm.value);
+
             }
             if (n < 0) pocisk = new Pocisk(vPocz, yPocz, katPocz, m, k, dt);
             else  pocisk = new Pocisk(vPocz, yPocz, katPocz, m, k, n);
