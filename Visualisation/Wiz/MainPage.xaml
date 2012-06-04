@@ -7,13 +7,13 @@
     xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
     xmlns:chartingPrimitivesToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting.Primitives;assembly=System.Windows.Controls.DataVisualization.Toolkit"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
+    d:DesignHeight="300" d:DesignWidth="500">
 
-    <Grid x:Name="LayoutRoot" Background="White">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid>
             <StackPanel>
                 <ContentControl Content="Wizualizacja" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
-                <chartingToolkit:Chart Width="400" Height="250">
+                <chartingToolkit:Chart Width="500" Height="250">
                     <chartingToolkit:Chart.Series>
                         <chartingToolkit:LineSeries x:Name="lineSeries" ItemsSource="{Binding Series}" IndependentValueBinding="{Binding Key}" DependentValueBinding="{Binding Value}">
                             <!--IndependentValueBinding="{Binding Date}" DependentValueBinding="{Binding Percent}"-->

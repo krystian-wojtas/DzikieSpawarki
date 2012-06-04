@@ -18,11 +18,8 @@ namespace Wiz
 
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
             //try
             //{
-=======
->>>>>>> 02b8e7805c53cb8e1e2636bfb58f6bf0791368ac
             var parameters = HtmlPage.Document.QueryString;
             if (parameters.ContainsKey(urlParam))
             {
