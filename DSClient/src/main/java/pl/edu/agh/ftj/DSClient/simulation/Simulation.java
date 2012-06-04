@@ -11,8 +11,8 @@ import javax.xml.ws.WebServiceRef;
 
 
 /**
- *
- * @author Monk
+ *Na dobrą sprawę klient webserwisu, ale równocześnie fasolka która odpowiada za całą magię. Przy dostawaniu się do odpowiednich pól wywoływane są odpowiednie zapytania do webserwisu mające na celu pobranie list symulacji/parametrów. 
+ * @author Michał Zimnicki
  */
 public class Simulation
 {
@@ -25,7 +25,7 @@ public class Simulation
     private LinkedList<SimulationFinished> resultList;
     
     /**
-     * Creates a new instance of Simulation
+     * Tworzy nową instancje klasy. Inicjalizuje wszystkie uchwyty do webserwiu.
      */
     public Simulation()
     {
@@ -42,7 +42,8 @@ public class Simulation
     
 
     /**
-     * @return the simulationList
+     * Zwraca liste możliwych symulacji do wykonania
+     * @return liste symulacji do wykonania
      */
     public LinkedList<SimulationClassCore> getSimulationList()
     {
@@ -58,6 +59,7 @@ public class Simulation
     }
 
     /**
+     * Wysyła do webserwisu listę parametrów wraz z ich wartościami oraz polecenie wykonania danej symulacji. Nie oczekuje na jej zakończenie.
      * @return the executeSimulation
      */
     
@@ -71,8 +73,12 @@ public class Simulation
         return "executeSimulation";
     }
     
-    
-    public String  SimulationParameters(String name)
+    /**
+     * Zapytanie o parametry symulacji o zadanej nazwie
+     * @param name nazwa rodzaju symulacji
+     * @return gp
+     */
+    public String SimulationParameters(String name)
     {
         try
         {
@@ -86,7 +92,8 @@ public class Simulation
     }
 
     /**
-     * @return the resultList
+     * Zwraca listę wykonanych symulacji wszystkich typów. 
+     * @return lista wykonanych symulacji
      */
     public LinkedList<SimulationFinished> getResultList()
     {
@@ -104,7 +111,11 @@ public class Simulation
     }
     
     
-    
+    /**
+     * Ustawia wartość parametru o zadanej nazwie na zadaną wartość w symulaji do wykonania
+     * @param parameterName nazwa parametru
+     * @param value wartość parametru
+     */
     public void setParameter(String parameterName, String value)
     {
         for(int i=0; i<this.getSimulationToExecute().getParameters().size(); i++)
@@ -118,7 +129,8 @@ public class Simulation
     }
 
     /**
-     * @return the simulationToExecute
+     * Zwraca symulację wraz z opisem jej parametrów by była gotowa do wykonania
+     * @return symulacja do wykonania
      */
     public SimulationToExecute getSimulationToExecute()
     {

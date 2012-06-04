@@ -5,20 +5,26 @@
 package pl.edu.agh.ftj.DSClient.simulation;
 
 /**
- *
- * @author Monk
+ *Bazowa klasa dla symulacji, przechowująca jedynie jej nazwę
+ * @author Michał Zimnicki
  */
 public class SimulationClassCore
 {
 
     private String name;
+    
+    /**
+     * Inicjalizacja instancji klasy
+     * @param name nazwa symulacji
+     */
     public SimulationClassCore(String name)
     {
         this.name = name;
     }
 
     /**
-     * @return the name
+     * Zwraca nazwę symulacji
+     * @return nazwa symulacji
      */
     public String getName()
     {

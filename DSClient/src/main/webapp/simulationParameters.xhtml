@@ -18,7 +18,7 @@
             <fieldset>
             <ui:repeat value="#{simulation.simulationToExecute.parameters}" var="parameter" id="simparam">
                 <div class="field"><label><h:outputText value="#{parameter.name}"></h:outputText></label>
-                <h:inputText value="#{parameter.type}" required="true" requiredMessage="pole jest wymagane" validatorMessage="podana przez ciebie wartość musi być liczbą"><f:validateDoubleRange ></f:validateDoubleRange>  </h:inputText> </div>
+                <h:inputText id="inputpr" value="#{parameter.type}" required="true" requiredMessage="pole jest wymagane" validatorMessage="podana przez ciebie wartość musi być liczbą"><f:validateDoubleRange ></f:validateDoubleRange>  </h:inputText><h:message for="inputpr" style="color:red" /> </div>
             </ui:repeat>
             
             <br /><br />
