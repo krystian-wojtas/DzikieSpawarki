@@ -12,7 +12,7 @@
 
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
-            <LinearGradientBrush>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                 <GradientStop Color="#f3f3f3"></GradientStop>
                 <GradientStop Color="#ffffff" Offset="1.0"></GradientStop>
             </LinearGradientBrush>
