@@ -8,7 +8,7 @@
     xmlns:chartingPrimitivesToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting.Primitives;assembly=System.Windows.Controls.DataVisualization.Toolkit"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="500"
-    >
+    Background="Transparent" >
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid Background="Transparent">
