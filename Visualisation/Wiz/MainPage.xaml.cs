@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Browser;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
 
 namespace Wiz
 {
@@ -18,27 +19,32 @@ namespace Wiz
 
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
-            var parameters = HtmlPage.Document.QueryString;
-            if (parameters.ContainsKey(urlParam))
+            Storyboard anim = (Storyboard)this.Resources["mainInAnimation"];
+            anim.Begin();
+            anim.Completed += (sen, evt) =>
             {
-                var url = parameters[urlParam];
-                Uri fileUri;
-                if (Uri.TryCreate(url, UriKind.Absolute, out fileUri))
+                var parameters = HtmlPage.Document.QueryString;
+                if (parameters.ContainsKey(urlParam))
                 {
-                    this.DataContext = new SeriesViewModel(fileUri);
-                    urlTextBox.Text = url;
+                    var url = parameters[urlParam];
+                    Uri fileUri;
+                    if (Uri.TryCreate(url, UriKind.Absolute, out fileUri))
+                    {
+                        this.DataContext = new SeriesViewModel(fileUri);
+                        urlTextBox.Text = url;
+                    }
+                    else
+                    {
+                        urlTextBox.Text = "malformed simulation data url";
+                    }
                 }
                 else
                 {
-                    urlTextBox.Text = "malformed simulation data url";
+                    urlTextBox.Text = "No file location in url";
                 }
-            }
-            else
-            {
-                urlTextBox.Text = "No file location in url";
-            }
+            };
+            //try
+            //{
             //}
             //catch (Exception ex)
             //{
