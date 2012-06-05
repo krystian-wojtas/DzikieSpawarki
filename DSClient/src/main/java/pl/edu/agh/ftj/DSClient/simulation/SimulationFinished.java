@@ -70,7 +70,7 @@ public class SimulationFinished extends SimulationToExecute
         URLConnection uc = u.openConnection();
         uc.connect();
         InputStream in = uc.getInputStream();
-        String path = "/home/ziemniakiikurczaki/symulacje/" + tb[tb.length-1];
+        String path = "/ziemniakiikurczaki/symulacje/" + tb[tb.length-1];
         FileOutputStream out = new FileOutputStream(path);
         final int BUF_SIZE = 1 << 8;
         byte[] buffer = new byte[BUF_SIZE];
