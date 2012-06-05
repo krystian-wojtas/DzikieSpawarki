@@ -29,7 +29,7 @@ public class WynikSymulacji
 	
 	public String toString()
 	{
-            return String.format("%.4f\t\t%.4f\t\t%.4f\t\t%.4f\n", Czas, X, Y, Kat);
+            return String.format("%.4f\t%.4f\t%.4f\t%.4f\n", Czas, X, Y, Kat);
 	}
 	
 	public double getX() { return X; }
