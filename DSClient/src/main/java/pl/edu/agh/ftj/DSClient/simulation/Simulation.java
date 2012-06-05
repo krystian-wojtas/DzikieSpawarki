@@ -137,4 +137,9 @@ public class Simulation
         return simulationToExecute;
     }
     
+    
+    public String shit()
+    {
+        return System.getProperty("java.io.tmpdir");
+    }
 }
