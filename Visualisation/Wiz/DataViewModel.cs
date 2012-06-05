@@ -32,7 +32,7 @@ namespace Wiz
             var lines = result.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (var line in lines)
             {
-                var data = line.Split(' ');
+                var data = line.Split(new[] { ' ', '\t' });
                 var x = Double.Parse(data[0], CultureInfo.InvariantCulture);
                 var y = Double.Parse(data[1], CultureInfo.InvariantCulture);
                 var xyPair = new KeyValuePair<double, double>(x, y);

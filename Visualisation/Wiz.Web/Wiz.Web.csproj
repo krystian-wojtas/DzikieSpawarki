@@ -54,6 +54,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="test2.txt" />
     <Content Include="ClientBin\Wiz.xap" />
     <Content Include="Silverlight.js" />
     <Content Include="Web.config">

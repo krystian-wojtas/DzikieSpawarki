@@ -54,5 +54,3 @@ C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz\obj\Debug\Wiz.g.res
 C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz\obj\Debug\Wiz.dll
 C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz\obj\Debug\Wiz.pdb
 C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz\obj\Debug\XapCacheFile.xml
-C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz\Bin\Debug\CZ.Controls.ZoomControl.dll
-C:\Users\lukas\Desktop\prog\DzikieSpawarki\Visualisation\Wiz\Bin\Debug\CZ.Controls.ZoomControl.pdb

@@ -36,7 +36,7 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Grid Name="mainGrid" Background="Transparent" Margin="0,0,0,0" Opacity="1.0">
+        <Grid Name="mainGrid" Background="Transparent" Margin="0,0,0,0" Opacity="0.0">
             <Grid.RenderTransform>
                 <TranslateTransform x:Name="panelTrans" X="-20"></TranslateTransform>
             </Grid.RenderTransform>
