@@ -18,6 +18,8 @@ namespace Wiz
 
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
+            //try
+            //{
             var parameters = HtmlPage.Document.QueryString;
             if (parameters.ContainsKey(urlParam))
             {
@@ -37,6 +39,11 @@ namespace Wiz
             {
                 urlTextBox.Text = "No file location in url";
             }
+            //}
+            //catch (Exception ex)
+            //{
+            //    urlTextBox.Text = ex.Message;
+            //}
         }
     }
 }
