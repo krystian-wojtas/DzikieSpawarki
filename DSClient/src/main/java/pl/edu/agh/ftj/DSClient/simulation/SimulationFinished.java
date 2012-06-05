@@ -81,7 +81,7 @@ public class SimulationFinished extends SimulationToExecute
         }
         in.close();
         out.close();
-        return "http://prgzsp.ftj.agh.edu.pl:8080"+ tb[tb.length-1];
+        return "http://prgzsp.ftj.agh.edu.pl:8080/"+ tb[tb.length-1];
         }
         catch (IOException ex)
         {
