@@ -9,6 +9,23 @@
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="500"
     >
+    <UserControl.Resources>
+        <Storyboard  x:Key="mainInAnimation">
+            <DoubleAnimation Storyboard.TargetName="panelTrans"
+                                    Storyboard.TargetProperty="X"
+                                    BeginTime="0:0:2"
+                                    Duration="0:0:0.2" To="0" >
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase  EasingMode="EaseOut"  />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="mainGrid" BeginTime="0:0:2" Storyboard.TargetProperty="Opacity" Duration="0:0:0.4" To="1">
+                <DoubleAnimation.EasingFunction>
+                    <QuadraticEase EasingMode="EaseOut"  />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
 
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
@@ -17,12 +34,16 @@
                 <GradientStop Color="#ffffff" Offset="1.0"></GradientStop>
             </LinearGradientBrush>
         </Grid.Background>
-        <Grid Background="Transparent">
+
+        <Grid Name="mainGrid" Background="Transparent" Margin="0,0,0,0" Opacity="1.0">
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="panelTrans" X="-20"></TranslateTransform>
+            </Grid.RenderTransform>
             <StackPanel Background="Transparent">
                 <ContentControl Content="Wizualizacja" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Background="Transparent"/>
-                <chartingToolkit:Chart Width="500" Height="250" >
+                <chartingToolkit:Chart Width="500" Height="250"  >
                     <chartingToolkit:Chart.Series>
-                        <chartingToolkit:LineSeries x:Name="lineSeries" ItemsSource="{Binding Series}" IndependentValueBinding="{Binding Key}" DependentValueBinding="{Binding Value}">
+                        <chartingToolkit:LineSeries  x:Name="lineSeries" ItemsSource="{Binding Series}" IndependentValueBinding="{Binding Key}" DependentValueBinding="{Binding Value}">
                             <!--IndependentValueBinding="{Binding Date}" DependentValueBinding="{Binding Percent}"-->
                             <chartingToolkit:LineSeries.DataPointStyle>
                                 <Style TargetType="Control">
@@ -39,13 +60,14 @@
                             </chartingPrimitivesToolkit:EdgePanel>
                         </ControlTemplate>
                     </chartingToolkit:Chart.Template>
-                    <!--<chartingToolkit:Chart.Axes>
-                        <chartingToolkit:DateTimeAxis Orientation="X" MaxHeight="1" Opacity="0" Minimum="2008/07/07" Maximum="2008/09/08"/>
-                        <chartingToolkit:LinearAxis Orientation="Y" MaxWidth="1" Opacity="0" Minimum="36" Maximum="55"/>
-                    </chartingToolkit:Chart.Axes>-->
+                    <chartingToolkit:Chart.Axes>
+                        <chartingToolkit:LinearAxis Title="X" Orientation="X" MaxHeight="40" Opacity="1" />
+                        <chartingToolkit:LinearAxis Title="Y" Orientation="Y" MaxWidth="40" Opacity="1" />
+                    </chartingToolkit:Chart.Axes>
                 </chartingToolkit:Chart>
             </StackPanel>
         </Grid>
+
         <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
             <TextBlock>File:</TextBlock>
             <TextBlock x:Name="urlTextBox">None</TextBlock>
