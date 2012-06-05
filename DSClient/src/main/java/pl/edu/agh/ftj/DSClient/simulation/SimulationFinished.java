@@ -86,8 +86,9 @@ public class SimulationFinished extends SimulationToExecute
         catch (IOException ex)
         {
             Logger.getLogger(SimulationFinished.class.getName()).log(Level.SEVERE, null, ex);
+            return ex.toString();
         }
-        return null;
+        //return null;
 
 
 
