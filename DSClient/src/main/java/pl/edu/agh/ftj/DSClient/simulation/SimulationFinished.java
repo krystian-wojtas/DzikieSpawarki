@@ -62,6 +62,7 @@ public class SimulationFinished extends SimulationToExecute
     {
 
         URL u;
+        String[] tb = url.split("/");
         try
         {
             u = new URL(url);
@@ -69,7 +70,7 @@ public class SimulationFinished extends SimulationToExecute
         URLConnection uc = u.openConnection();
         uc.connect();
         InputStream in = uc.getInputStream();
-        String path = System.getProperty("java.io.tmpdir")+"/" + "znajdzmnie";
+        String path = "/home/ziemniakiikurczaki/symulacje/" + tb[tb.length-1];
         FileOutputStream out = new FileOutputStream(path);
         final int BUF_SIZE = 1 << 8;
         byte[] buffer = new byte[BUF_SIZE];
@@ -80,7 +81,7 @@ public class SimulationFinished extends SimulationToExecute
         }
         in.close();
         out.close();
-        return path;
+        return "http://prgzsp.ftj.agh.edu.pl"+path;
         }
         catch (IOException ex)
         {
