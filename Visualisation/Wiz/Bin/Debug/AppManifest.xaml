@@ -1,6 +1,7 @@
 ﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Wiz" EntryPointType="Wiz.App" RuntimeVersion="4.0.60310.0">
   <Deployment.Parts>
     <AssemblyPart x:Name="Wiz" Source="Wiz.dll" />
+    <AssemblyPart x:Name="CZ.Controls.ZoomControl" Source="CZ.Controls.ZoomControl.dll" />
     <AssemblyPart x:Name="System.Windows.Controls.DataVisualization.Toolkit" Source="System.Windows.Controls.DataVisualization.Toolkit.dll" />
     <AssemblyPart x:Name="System.Windows.Controls.Toolkit" Source="System.Windows.Controls.Toolkit.dll" />
     <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
