@@ -70,7 +70,7 @@ public class SimulationFinished extends SimulationToExecute
         URLConnection uc = u.openConnection();
         uc.connect();
         InputStream in = uc.getInputStream();
-        String path = "/home/ziemniakiikurczaki/symulacje/" + tb[tb.length-1];
+        String path = "/opt/glassfish3/glassfish/domains/testdomain/docroot/" + tb[tb.length-1];
         FileOutputStream out = new FileOutputStream(path);
         final int BUF_SIZE = 1 << 8;
         byte[] buffer = new byte[BUF_SIZE];
@@ -81,7 +81,7 @@ public class SimulationFinished extends SimulationToExecute
         }
         in.close();
         out.close();
-        return "http://prgzsp.ftj.agh.edu.pl"+path;
+        return "http://prgzsp.ftj.agh.edu.pl/"+ tb[tb.length-1];
         }
         catch (IOException ex)
         {
