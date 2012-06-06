@@ -235,8 +235,8 @@ public class Pocisk implements Runnable
         {
 
                 StringBuilder result = new StringBuilder();
-                result.append(String.format("%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\n",
-                        vPocz, yPocz, katPocz, m, k, dt));
+                //result.append(String.format("%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\n",
+                //        vPocz, yPocz, katPocz, m, k, dt));
 
                 while (!zatrzymaj && !ziemia)
                 {
