@@ -248,12 +248,15 @@ public class Pocisk implements Runnable
                     
                     if (ziemia)
                     {
-                        result.append(String.format("%.4f\t%.4f\t%.4f\n", t0, wynik[0], 0f));
+                        //result.append(String.format("%.4f\t%.4f\t%.4f\n", t0, wynik[0], 0f));
+                        result.append(String.format("%.4f\t%.4f\n", wynik[0], 0f));
                     }
                     else
                     {
 
-                        result.append(String.format("%.4f\t%.4f\t%.4f\n", t, wynik[0], wynik[1]));
+                        //result.append(String.format("%.4f\t%.4f\t%.4f\n", t, wynik[0], wynik[1]));
+                        result.append(String.format("%.4f\t%.4f\n", wynik[0], wynik[1]));
+
                     }
                     
                     t = t + dt;
